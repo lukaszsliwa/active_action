@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails-active_action (3.0.0)
+    rails-active_action (3.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -30,7 +30,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (~> 3.0.0)
+  activesupport (>= 3.0.1)
   i18n (~> 1.8.9)
   rails-active_action!
   rake (~> 12.0)
