@@ -7,7 +7,7 @@ A simple way to build and use Service Objects in Ruby on Rails.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails-active_action', '~> 3.0.0'
+gem 'rails-active_action', '~> 3.0.1'
 ```
 
 And then execute:
