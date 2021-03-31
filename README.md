@@ -43,7 +43,7 @@ or `perform!` to raise an error if occurred.
 class MyAction < ActiveAction::Base
   def perform
     # Your code here
-    error!
+    error!(message: 'Example error message')
   end
 end
 
@@ -74,7 +74,7 @@ class CreateUser < ActiveAction::Base
   end
   
   def send_email_on_success
-    User.welcome.with(user: self.user).deliver
+    UserMailer.with(user: self.user).welcome.deliver_later
   end
 end
 
@@ -93,6 +93,10 @@ class UsersController < ApplicationController
   end
   
   private
+  
+  def params_user
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+  end
   
   def current_company
     @company ||= Company.find_by!(subdomain: request.subdomain)
@@ -117,11 +121,21 @@ class CreatePost < ActiveAction::Base
     # run a code after perform within a block
   end
   
-  after_perform :run_callback, on: :success
-  after_perform :run_warning_email, on: :error
+  after_perform :run_success_callback, on: :success
+  after_perform :run_error_callback, on: :error
   
   def perform(user, params: {})
-    # your code here
+    @user = user
+  end
+
+  protected
+  
+  def run_success_callback
+    UserMailer.with(user: @user).success.deliver_later
+  end
+  
+  def run_error_callback
+    UserMailer.with(user: @user).error.deliver_later
   end
 end
 ```
@@ -153,7 +167,7 @@ Call `success!`, `succeed!`, `done!`, `correct!`, `ready!`, `active!` if the act
 # app/actions/run.rb
 class Run < ActiveAction::Base
   def perform
-    if rand(100) % 2 == 0
+    if (@value = rand(100)) % 2 == 0
       success!
     else
       fail!
@@ -163,7 +177,7 @@ class Run < ActiveAction::Base
   after_perform :send_email_on_success
   
   def send_email_on_success
-    Mail.deliver! if success?
+    RunnerMailer.set(value: @value).deliver_later if success?
   end
 end
 ```

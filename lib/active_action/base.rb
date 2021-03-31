@@ -6,7 +6,7 @@ module ActiveAction
     extend ActiveAction::Callbacks
     include ActiveAction::Statuses
 
-    attr_reader :status
+    attr_reader :status, :message
     attr_accessor :value
 
     class << self
@@ -21,7 +21,7 @@ module ActiveAction
 
       def perform!(*args)
         if (instance = perform(*args)).error?
-          raise ActiveAction::Error.new
+          raise ActiveAction::Error.new(instance.message)
         end
         instance
       end

@@ -7,7 +7,10 @@ module ActiveAction
       values.each do |value|
         define_method(:"#{value}?") { @status == key }
 
-        define_method(:"#{value}!") { @status = key }
+        define_method(:"#{value}!") do |**args|
+          @message = args[:message]
+          @status = key
+        end
       end
     end
   end

@@ -5,7 +5,7 @@ RSpec.describe ActiveAction::Base do
     attr_reader :result
 
     def perform(company, params)
-      success!
+      success!(message: 'Done')
     end
 
     def go!
@@ -34,7 +34,7 @@ RSpec.describe ActiveAction::Base do
 
     def perform(company, params)
       @result = :perform
-      error!
+      error!(message: 'This is example error message')
     end
 
     def go!
@@ -128,6 +128,7 @@ RSpec.describe ActiveAction::Base do
       let(:action) { MyAction1.perform('MyCompany', { param: 1, xyz: 2 }) }
 
       it 'should set result to :won' do
+        expect(action.message).to eq('Done')
         expect(action.success?).to eq(true)
         expect(action.result).to eq(:won)
       end
