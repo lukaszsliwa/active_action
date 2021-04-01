@@ -125,17 +125,23 @@ class CreatePost < ActiveAction::Base
   after_perform :run_error_callback, on: :error
   
   def perform(user, params: {})
-    @user = user
+    @post = user.posts.build(params)
+    
+    if @post.save
+      success!(message: 'Post was successfully created.')
+    else
+      error!(message: @post.errors.full_messages.join(' '))
+    end
   end
 
   protected
   
   def run_success_callback
-    UserMailer.with(user: @user).success.deliver_later
+    PostMailer.with(post: @post).success.deliver_later
   end
   
   def run_error_callback
-    UserMailer.with(user: @user).error.deliver_later
+    PostMailer.with(post: @post).error.deliver_later
   end
 end
 ```
