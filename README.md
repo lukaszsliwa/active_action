@@ -1,3 +1,7 @@
+[![Gem Version](https://badge.fury.io/rb/rails-active_action.svg)](https://badge.fury.io/rb/rails-active_action)
+[![License MIT](https://img.shields.io/github/license/lukaszsliwa/active_action)](https://github.com/lukaszsliwa/active_action/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/lukaszsliwa/active_action)](https://github.com/lukaszsliwa/active_action/issues)
+
 # ActiveAction
 
 A simple way to build and use Service Objects in Ruby on Rails.
