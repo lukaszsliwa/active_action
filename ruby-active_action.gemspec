@@ -1,12 +1,12 @@
 require_relative 'lib/active_action/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rails-active_action"
+  spec.name          = "ruby-active_action"
   spec.version       = ActiveAction::VERSION
   spec.authors       = ["Łukasz Śliwa"]
   spec.email         = ["lukasz.sliwa@apptamers.com"]
 
-  spec.summary       = %q{A simple way to build and use Service Objects in Ruby on Rails.}
+  spec.summary       = %q{A simple way to build and use Service Objects in Ruby.}
   spec.description   = %q{ActiveAction makes you able to organise and move some actions to the separated classes.}
   spec.homepage      = "https://github.com/lukaszsliwa/active_action"
   spec.license       = "MIT"

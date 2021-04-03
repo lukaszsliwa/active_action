@@ -7,23 +7,31 @@
 
 # ActiveAction
 
-A simple way to build and use Service Objects in Ruby on Rails.
+A simple way to build and use Service Objects in Ruby.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails-active_action', '~> 3.0.1'
+gem 'ruby-active_action', '~> 3.0.1'
 ```
+
+or use alternative gems:
+
+* [rails-active_action](https://github.com/lukaszsliwa/rails-active_action)
+* [cuba-active_action](https://github.com/lukaszsliwa/cuba-active_action)
+* [grape-active_action](https://github.com/lukaszsliwa/grape-active_action)
+* [hanami-active_action](https://github.com/lukaszsliwa/hanami-active_action)
+* [nyny-active_action](https://github.com/lukaszsliwa/nyny-active_action)
+* [padrino-active_action](https://github.com/lukaszsliwa/padrino-active_action)
+* [ramaze-active_action](https://github.com/lukaszsliwa/ramaze-active_action)
+* [roda-active_action](https://github.com/lukaszsliwa/roda-active_action)
+* [sinatra-active_action](https://github.com/lukaszsliwa/sinatra-active_action)
 
 And then execute:
 
     $ bundle install
-
-Or install it yourself as:
-
-    $ gem install rails-active_action
 
 ## ActiveAction example
 
