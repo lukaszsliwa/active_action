@@ -1,14 +1,7 @@
-require 'active_support/dependencies/autoload'
-require 'active_support/callbacks'
-
-require 'active_action/version'
-require 'active_action/statuses'
-require 'active_action/callbacks'
-require 'active_action/base'
-require 'active_action/error'
+require 'action_action'
 
 #
-# Examples
+# Example
 #
 #   class MyAction < ActiveAction::Base
 #     after_perform :send_email, on: :success
@@ -24,8 +17,5 @@ require 'active_action/error'
 #
 
 module ActiveAction
-  extend ActiveSupport::Autoload
-
-  autoload :Base
-  autoload :Error
+  include ActionAction
 end

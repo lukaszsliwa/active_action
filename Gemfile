@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gemspec
 
 gem 'activesupport', '>= 3.0.1'
+gem 'action_action', '= 4.0.1'
 
 group :test do
   gem 'rake', '~> 12.0'
