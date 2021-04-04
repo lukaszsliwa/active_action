@@ -1,7 +1,7 @@
 [![ActiveAction](https://raw.githubusercontent.com/lukaszsliwa/active_action/main/intro2.png)](https://github.com/lukaszsliwa/active_action/)
 
 
-[![Gem Version](https://badge.fury.io/rb/rails-active_action.svg)](https://badge.fury.io/rb/rails-active_action)
+[![Gem Version](https://badge.fury.io/rb/ruby-active_action.svg)](https://badge.fury.io/rb/ruby-active_action)
 [![License MIT](https://img.shields.io/github/license/lukaszsliwa/active_action)](https://github.com/lukaszsliwa/active_action/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/lukaszsliwa/active_action)](https://github.com/lukaszsliwa/active_action/issues)
 
