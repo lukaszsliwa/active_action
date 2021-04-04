@@ -1,3 +1,5 @@
-module ActiveAction
-  VERSION = '3.0.2'
-end
+
+        module ActiveAction
+          version = '3.0.3'
+        end
+      
