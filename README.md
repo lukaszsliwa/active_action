@@ -17,18 +17,6 @@ Add this line to your application's Gemfile:
 gem 'ruby-active_action', '~> 3.0.2'
 ```
 
-or use alternative gems:
-
-* [rails-active_action](https://github.com/lukaszsliwa/rails-active_action)
-* [cuba-active_action](https://github.com/lukaszsliwa/cuba-active_action)
-* [grape-active_action](https://github.com/lukaszsliwa/grape-active_action)
-* [hanami-active_action](https://github.com/lukaszsliwa/hanami-active_action)
-* [nyny-active_action](https://github.com/lukaszsliwa/nyny-active_action)
-* [padrino-active_action](https://github.com/lukaszsliwa/padrino-active_action)
-* [ramaze-active_action](https://github.com/lukaszsliwa/ramaze-active_action)
-* [roda-active_action](https://github.com/lukaszsliwa/roda-active_action)
-* [sinatra-active_action](https://github.com/lukaszsliwa/sinatra-active_action)
-
 And then execute:
 
     $ bundle install
@@ -210,6 +198,19 @@ class Run < ActiveAction::Base
   end
 end
 ```
+
+### Alternative ActiveAction gems
+
+* [rails-active_action](https://github.com/lukaszsliwa/rails-active_action)
+* [cuba-active_action](https://github.com/lukaszsliwa/cuba-active_action)
+* [grape-active_action](https://github.com/lukaszsliwa/grape-active_action)
+* [hanami-active_action](https://github.com/lukaszsliwa/hanami-active_action)
+* [nyny-active_action](https://github.com/lukaszsliwa/nyny-active_action)
+* [padrino-active_action](https://github.com/lukaszsliwa/padrino-active_action)
+* [ramaze-active_action](https://github.com/lukaszsliwa/ramaze-active_action)
+* [roda-active_action](https://github.com/lukaszsliwa/roda-active_action)
+* [sinatra-active_action](https://github.com/lukaszsliwa/sinatra-active_action)
+
 
 ## Contributing
 
