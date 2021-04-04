@@ -36,8 +36,12 @@ And then execute:
 ## ActiveAction example
 
 ```ruby
+# app/actions/application_action.rb
+class ApplicationAction < ActiveAction::Base
+end
+
 # app/actions/my_action.rb
-class MyAction < ActiveAction::Base
+class MyAction < ApplicationAction
   def perform
     # Your code here
   end
@@ -46,16 +50,20 @@ end
 # app/controllers/my_controller.rb
 class MyController < ApplicationController
   def create
-    MyAction.perform
+    MyAction.perform # or MyAction.perform!
   end
 end
 ```
 
-or `perform!` to raise an error if occurred.
+`perform!` raises an error if occurred.
 
 ```ruby
+# app/actions/application_action.rb
+class ApplicationAction < ActiveAction::Base
+end
+
 # app/actions/my_action.rb
-class MyAction < ActiveAction::Base
+class MyAction < ApplicationAction
   def perform
     # Your code here
     error!(message: 'Example error message')
